@@ -1,0 +1,106 @@
+
+.imgslider {
+    width: 100%;
+    height: 35rem !important;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+ul li input {
+    position: relative;
+    z-index: 1000;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+ul li .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ul li .slide .left {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+}
+
+ul li .slide .right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+}
+
+ul li .slide .left.left-face {
+    left: 0;
+    transition: transform 1s;
+    /* transform-origin: bottom; */
+    transform: rotateX(90deg);
+}
+
+ul li .slide .left.left-face img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul li .slide .right.right-face {
+    right: 0;
+    transition: transform 1s;
+    transform-origin: top;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(90deg);
+}
+
+ul li .slide .right.right-face h2 {
+    font-size: 3rem;
+    color: #333;
+}
+
+ul li .slide .right.right-face p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5em;
+}
+
+ul li input[type="radio"]:checked~.slide .left.left-face {
+    transform: rotateX(0deg);
+    transition: transform 1s;
+    transform-origin: top;
+}
+
+ul li input[type="radio"]:checked~.slide .right.right-face {
+    transform: rotateX(0deg);
+    transition: transform 1s;
+    transform-origin: bottom;
+}

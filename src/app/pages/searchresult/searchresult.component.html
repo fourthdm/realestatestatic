@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="popup-overlay" *ngIf="showPopup">
+        <div class="popup-content">
+            <div class="text-end">
+                <span (click)="closePopup()"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <h2>Enquiry Form </h2>
+            <form (ngSubmit)="submitEnquiry()">
+                <label for="name">Name:</label>
+                <br><input type="text" id="name" [(ngModel)]="enquiryData.name" name="name" required />
+                <br><br>
+              
+                <label for="email">Email:</label>
+                <br> <input type="email" id="email" [(ngModel)]="enquiryData.email" name="email" required />
+                <br><br>
+
+                <label for="message">Message:</label>
+                <br> <textarea id="message" [(ngModel)]="enquiryData.message" name="message" required></textarea>
+                <br><br>
+                
+                <button class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-danger" style="margin-left: 5%;" type="button" (click)="closePopup()">Close</button>
+            </form>
+        </div>
+    </div>
+</div>

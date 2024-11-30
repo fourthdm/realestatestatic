@@ -1,0 +1,41 @@
+.headtext {
+  font-family: 'Alegreya', serif;
+  font-size: 5em;
+  font-weight: 500;
+  color: black;
+  /* text-shadow: wheat; */
+  -webkit-text-fill-color: #ded4cb;
+  -webkit-text-stroke: 1px #6d4a2a;
+  animation: left 2s 1;
+}
+
+
+@keyframes left {
+  0% {
+      transform: translateX(100px);
+  }
+
+  100% {
+      transform: translateX(-50px);
+  }
+}
+
+
+.col-md-6{
+  padding: 0%;
+}
+
+i{
+  color: #ad8a53;
+}
+label{
+  color: black;
+}
+
+.form{
+  padding: 5%;
+}
+
+h2{
+  color: black;
+}

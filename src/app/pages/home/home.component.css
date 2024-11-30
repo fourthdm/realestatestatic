@@ -1,0 +1,47 @@
+.p {
+    margin-top: -20rem;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@keyframes up {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+.img2 {
+    /* height: 20vh; */
+    width: 100%;
+}
+
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.textmain {
+    margin-top: -50rem;
+    animation: up 2s 1;
+}
+
+.b{
+    background-color: red; color: white;
+}
+
+.b:hover{
+    background-color: white;
+    color: black;
+}
+
+
+img {
+    width: 100%;
+}
