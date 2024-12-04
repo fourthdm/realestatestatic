@@ -1,106 +1,122 @@
 
-.imgslider {
-    width: 100%;
-    height: 35rem !important;
+.headtext {
+    font-family: 'Alegreya', serif;
+    font-size: 5em;
+    font-weight: 500;
+    color: black;
+    /* text-shadow: wheat; */
+    /* -webkit-text-fill-color: #ded4cb;
+    -webkit-text-stroke: 1px #6d4a2a; */
+    -webkit-text-fill-color:#b88417;
+    /* -webkit-text-fill-color: #ded4cb; */
+    -webkit-text-stroke: 1px #6d4a2a;
+    animation: left 2s 2;
 }
 
-.slider {
+@keyframes left {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+h4 ,h2{
+    color: #b88417;
+}
+
+figure.snip1256 {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
     position: relative;
-    width: 100%;
-    height: 80vh;
     overflow: hidden;
-}
-
-ul {
-    position: relative;
+    margin: 10px;
+   
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    color: #ffffff;
+    text-align: left;
+    background-color: #07090c;
+    font-size: 16px;
+    -webkit-perspective: 50em;
+    perspective: 50em;
 }
 
-ul li {
-    list-style: none;
-    margin-bottom: 50px;
+figure.snip1256 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
 }
 
-ul li input {
-    position: relative;
-    z-index: 1000;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
+figure.snip1256 img {
+    opacity: 1;
+    width: 100%;
+    /* -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; */
 }
 
-ul li .slide {
+figure.snip1256 figcaption {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% -50%;
+    -ms-transform-origin: 50% -50%;
+    transform-origin: 50% -50%;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px 30px;
 }
 
-ul li .slide .left {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background: #fff;
-}
-
-ul li .slide .right {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background: #fff;
-}
-
-ul li .slide .left.left-face {
-    left: 0;
-    transition: transform 1s;
-    /* transform-origin: bottom; */
-    transform: rotateX(90deg);
-}
-
-ul li .slide .left.left-face img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-ul li .slide .right.right-face {
-    right: 0;
-    transition: transform 1s;
-    transform-origin: top;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateX(90deg);
-}
-
-ul li .slide .right.right-face h2 {
-    font-size: 3rem;
-    color: #333;
-}
-
-ul li .slide .right.right-face p {
-    font-size: 1.1rem;
-    color: #333;
+figure.snip1256 h2,
+figure.snip1256 p {
     line-height: 1.5em;
 }
 
-ul li input[type="radio"]:checked~.slide .left.left-face {
-    transform: rotateX(0deg);
-    transition: transform 1s;
-    transform-origin: top;
+figure.snip1256 h2 {
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-ul li input[type="radio"]:checked~.slide .right.right-face {
+figure.snip1256 p {
+    /* font-size: 1.1em; */
+    font-weight: 500;
+    margin: 0 0 15px;
+    text-align: justify;
+}
+
+figure.snip1256 .read-more {
+    border: 2px solid #ffffff;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+}
+
+figure.snip1256 .read-more:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+figure.snip1256:hover img,
+figure.snip1256.hover img {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+
+figure.snip1256:hover figcaption,
+figure.snip1256.hover figcaption {
+    -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
-    transition: transform 1s;
-    transform-origin: bottom;
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }

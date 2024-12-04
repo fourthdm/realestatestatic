@@ -1,26 +1,130 @@
 <div class="container">
-    <div class="popup-overlay" *ngIf="showPopup">
-        <div class="popup-content">
-            <div class="text-end">
-                <span (click)="closePopup()"><i class="fa-solid fa-xmark"></i></span>
-            </div>
-            <h2>Enquiry Form </h2>
-            <form (ngSubmit)="submitEnquiry()">
-                <label for="name">Name:</label>
-                <br><input type="text" id="name" [(ngModel)]="enquiryData.name" name="name" required />
-                <br><br>
-              
-                <label for="email">Email:</label>
-                <br> <input type="email" id="email" [(ngModel)]="enquiryData.email" name="email" required />
-                <br><br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="popup-overlay" *ngIf="showPopup">
+                <div class="popup-content">
+                    <div class="text-end">
+                        <span (click)="closePopup()"><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="color: #fae382;">Enquiry Form </h2>
+                    </div> <br>
+                    <form action="" (ngSubmit)="submitEnquiry()">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="First Name"
+                                        aria-label="FirstName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Last Name"
+                                        aria-label="LastName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
 
-                <label for="message">Message:</label>
-                <br> <textarea id="message" [(ngModel)]="enquiryData.message" name="message" required></textarea>
-                <br><br>
-                
-                <button class="btn btn-success" type="submit">Submit</button>
-                <button class="btn btn-danger" style="margin-left: 5%;" type="button" (click)="closePopup()">Close</button>
-            </form>
+                        <div class="col-md-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-solid fa-envelope fa-xl"></i></span>
+                                <input type="text" class="form-control" placeholder="Email Address"
+                                    aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-solid fa-phone fa-xl"></i></span>
+                                <input type="text" class="form-control" placeholder="Contact Number"
+                                    aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i
+                                            class="fa-solid fa-map-location-dot fa-xl"></i></label>
+                                    <select class="form-select" id="inputGroupSelect01">
+                                        <option selected>Select a Area..</option>
+                                        <option value="1">Kharadi </option>
+                                        <option value="2">Katraj </option>
+                                        <option value="3">Hadapsar</option>
+                                    </select>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a valid Area.
+                                </div>
+                            </div> <br>
+
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1" style="color: #ad8a53;">Appoinment
+                                        Date</span>
+                                    <input type="datetime-local" class="form-control" id="Appoinment" aria-label=""
+                                        aria-describedby="basic-addon1" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="Project Scope" class="form-label">Project Scope :</label> <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                <label class="form-check-label" for="inlineCheckbox1">New Project</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                <label class="form-check-label" for="inlineCheckbox2">Residential
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                                <label class="form-check-label" for="inlineCheckbox3">Commercial
+                                </label>
+                            </div>
+                        </div> <br>
+
+                        <div class="col-md-12">
+                            <label for="Project Scope" class="form-label">Message :</label> <br>
+                            <textarea class="form-control" aria-label="With textarea" placeholder="Message"></textarea>
+                        </div>
+                        <br>
+                        <button class="btn btn-success" type="submit">Submit</button>
+                        <button class="btn btn-danger" style="margin-left: 5%;" type="button"
+                            (click)="closePopup()">Close</button>
+                        <br><br>
+                    </form>
+                    <!-- <form (ngSubmit)="submitEnquiry()">
+                    <label for="name">Name:</label>
+                    <br><input type="text" id="name" [(ngModel)]="enquiryData.name" name="name" required />
+                    <br><br>
+                  
+                    <label for="email">Email:</label>
+                    <br> <input type="email" id="email" [(ngModel)]="enquiryData.email" name="email" required />
+                    <br><br>
+    
+                    <label for="message">Message:</label>
+                    <br> <textarea id="message" [(ngModel)]="enquiryData.message" name="message" required></textarea>
+                    <br><br>
+                    
+                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="btn btn-danger" style="margin-left: 5%;" type="button" (click)="closePopup()">Close</button>
+                </form> -->
+                </div>
+            </div>
         </div>
+        <div class="col-md-2"></div>
     </div>
 </div>

@@ -16,6 +16,7 @@ import { HighlightPipe } from './highlight.pipe';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { WhyusComponent } from './pages/whyus/whyus.component';
+import { ViewprojectComponent } from './pages/viewproject/viewproject.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { WhyusComponent } from './pages/whyus/whyus.component';
     HighlightPipe,
     ProjectsComponent,
     ServicesComponent,
-    WhyusComponent
+    WhyusComponent,
+    ViewprojectComponent
   ],
   imports: [
     BrowserModule,

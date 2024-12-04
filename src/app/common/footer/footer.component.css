@@ -1,4 +1,62 @@
 .main{
-    background-color: black;
+    background-color: #836737;
     color: white;   
+}
+
+img{
+    width: 100%;
+}
+
+.p{
+    font-size: larger;
+}
+
+.list {
+    padding: 2%;
+    font-size: 25px;
+}
+
+i{
+    color: #e8e8e6;
+}
+
+.iconi:hover{
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+
+.facebook:hover{
+    color: #0f51ad;
+    z-index: 2;
+}
+
+.phone:hover{
+    color: rgba(23, 176, 244, 255);
+}
+
+@media(max-width:439px){}
+
+.main1{
+    background-color: #f9f2dc;
+    padding: 1%;
+}
+
+.btn-warning:hover {
+    background-color: white;
+    color: #12353f;
+}
+
+li:hover{
+    color: #fae382;
+    transform: scale(1.1);
+}
+
+li{
+    list-style: none;
+}
+
+.linkss{
+    padding-left: 5%;
 }

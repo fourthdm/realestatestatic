@@ -7,19 +7,21 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ViewprojectComponent } from './pages/viewproject/viewproject.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'blog', component: BlogsComponent },
+  { path: 'testimonials', component: BlogsComponent },
   { path: 'project', component: ProjectsComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'viewproject', component: ViewprojectComponent },
   { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

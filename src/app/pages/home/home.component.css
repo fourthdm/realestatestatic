@@ -32,11 +32,12 @@
     animation: up 2s 1;
 }
 
-.b{
-    background-color: red; color: white;
+.b {
+    background-color: goldenrod;
+    color: white;
 }
 
-.b:hover{
+.b:hover {
     background-color: white;
     color: black;
 }
@@ -44,4 +45,107 @@
 
 img {
     width: 100%;
+}
+
+.h1 {
+    /* -webkit-text-fill-color: #ded4cb; */
+    -webkit-text-fill-color: #b88417;
+    -webkit-text-stroke: 1px #836737;
+    text-decoration: underline;
+}
+
+.snip1361 {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 100%;
+    color: #141414;
+    text-align: left;
+    line-height: 1.4em;
+    font-size: 16px;
+}
+
+.snip1361 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.snip1361 img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.snip1361 figcaption {
+    position: absolute;
+    top: calc(85%);
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 25px 65px;
+}
+
+.snip1361 figcaption:before {
+    position: absolute;
+    content: '';
+    z-index: 2;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+    background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+
+.snip1361 h3,
+.snip1361 p {
+    margin: 0 0 10px;
+}
+
+.snip1361 h3 {
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+.snip1361 p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.snip1361 a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.snip1361:hover figcaption,
+.snip1361.hover figcaption {
+    top: 100px;
+}
+
+.main {
+    background-color: #e8e2ca;
+}
+
+.ptestimonials {
+    font-size: 2.8em;
+    font-weight: 800;
+}
+
+.card{
+    height: 100%;
+}
+
+.d{
+    background-color: #836737;
+    color: white;
+}
+
+.td{
+    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
 }

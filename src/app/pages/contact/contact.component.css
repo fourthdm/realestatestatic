@@ -4,8 +4,11 @@
   font-weight: 500;
   color: black;
   /* text-shadow: wheat; */
-  -webkit-text-fill-color: #ded4cb;
-  -webkit-text-stroke: 1px #6d4a2a;
+  /* -webkit-text-fill-color: #ded4cb;
+  -webkit-text-stroke: 1px #6d4a2a; */
+  -webkit-text-fill-color:#b88417;
+    /* -webkit-text-fill-color: #ded4cb; */
+    -webkit-text-stroke: 1px #6d4a2a;
   animation: left 2s 1;
 }
 
@@ -26,7 +29,7 @@
 }
 
 i{
-  color: #ad8a53;
+  color: #b88417;
 }
 label{
   color: black;

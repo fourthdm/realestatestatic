@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { SearchService } from 'src/app/services/search.service';
 
 @Component({
@@ -15,16 +15,26 @@ export class SearchresultComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
+
+    this.showPopup = true;
+
     this.interval = setInterval(() => {
       this.showPopup = true;
-    }, (2000));
+    }, (20000));
+  }
+
+  @HostListener('document:keydown.escape', ['$event']) // Listen for Esc key press
+  handleEscapeKey(event: KeyboardEvent) {
+    if (this.showPopup) {
+      this.closePopup();
+    }
   }
 
   submitEnquiry() {
     console.log('Form submitted', this.enquiryData)
     this.closePopup();
   }
-  
+
   closePopup() {
     this.showPopup = false;
   }
